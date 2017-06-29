@@ -1,3 +1,5 @@
+import jdk.nashorn.internal.ir.WhileNode;
+
 import java.util.Scanner;
 
 /**
@@ -5,31 +7,85 @@ import java.util.Scanner;
  */
 public class OOValidator {
 
-    Scanner sc;
+    private Scanner sc = new Scanner(System.in);
+    private boolean validEntry = false;
 
     public OOValidator(Scanner sc) {
 
     }
 
     public int getInt(String prompt) {
-        System.out.println("Enter any integer:");
-        sc.nextLine();
+        int returnInt = 0;
+        String sInput;
 
-        return 0;
+        while (!validEntry) {
+            System.out.println(prompt);
+            sInput = sc.nextLine();
+            if (sInput.matches("[1234567890]")) {
+                returnInt = Integer.parseInt(sInput);
+                validEntry = true;
+
+            } else {
+                System.out.println("Please Try Again");
+            } // end else
+
+        } // end while
+        return returnInt;
+    } // end method
+
+    public int getIntWithinRange(String prompt, int min, int max) {
+        int returnInt = 0;
+        String sInput;
+
+        while (!validEntry) {
+            System.out.println(prompt);
+            sInput = sc.nextLine();
+            if (sInput.matches("[1234567890]")&& (Integer.parseInt(sInput) < min || Integer.parseInt(sInput) > max)) {
+                System.out.println("Please Try Again");
+
+            } else {
+                returnInt = Integer.parseInt(sInput);
+                validEntry = true;
+            } // end else
+
+        } // end while
+        return returnInt;
+    } // end method
+
+    public double getDouble(String prompt) {
+        double returnDouble = 0;
+        String sInput;
+
+        while (!validEntry) {
+            System.out.println(prompt);
+            sInput = sc.nextLine();
+            if (sInput.matches("[1234567890]")) {
+                returnDouble = Double.valueOf(sInput);
+                validEntry = true;
+
+            } else {
+                System.out.println("Please Try Again");
+            } // end else
+
+        } // end while
+        return returnDouble;
     }
 
-    public int getIntWithinRange(String prompt, int min, int max){
-        System.out.println("Enter any integer between " + min + "and " + max + ":");
-        return 0;
-    }
+    public double getDoubleWithinRange(String prompt, double min, double max) {
+        double returnDouble = 0;
+        String sInput;
 
-    public double getDouble(String prompt){
-        System.out.println("Enter any double:");
-        return 0;
-    }
+        while (!validEntry) {
+            System.out.println(prompt);
+            sInput = sc.nextLine();
+            if (sInput.matches("[1234567890]") && (Double.valueOf(sInput) <min || Double.valueOf(sInput)>max)) {
+                System.out.println("Please Try Again");
+            } else {
+                returnDouble = Double.valueOf(sInput);
+                validEntry = true;
+            } // end else
 
-    public double getDoubleWithinRange(String prompt, double min, double max){
-        System.out.println("Enter any double between " + min + "and " + max + ":");
-        return 0;
+        } // end while
+        return returnDouble;
     }
 }
