@@ -13,7 +13,7 @@ public class OOValidator {
 
     public int getInt(String prompt) {
         System.out.println("Enter any integer:");
-        sc.nextLine()
+        sc.nextLine();
 
         return 0;
     }
