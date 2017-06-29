@@ -10,10 +10,16 @@ IntelliJ IDEA
 Used to tet the methods in the validator, OOValidator, and MyValidator classes.
  */
 
+import java.util.Scanner;
 
 public class ValidatorTestApp {
 
     public static void main(String[] args) {
-        // write your code here
+        System.out.println("Hello World");
+        Scanner scnr = new Scanner(System.in);
+        OOValidator validClass = new OOValidator(scnr);
+
+        validClass.getInt("Hi");
+
     }
 }
