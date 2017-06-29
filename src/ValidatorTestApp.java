@@ -2,7 +2,7 @@
 /*
 GCBonus4
 ValidatorTestApp
-Written by Matthew MEnna
+Written by Matthew Menna
 6/29/2017
 9:48 AM
 2017
@@ -19,7 +19,9 @@ public class ValidatorTestApp {
         Scanner scnr = new Scanner(System.in);
         OOValidator validClass = new OOValidator(scnr);
 
-        validClass.getInt("Hi");
+        System.out.println(validClass.getInt("Enter an integer"));
+
+        System.out.println(validClass.getIntWithinRange("Enter an integer between 4 and 10", 4, 10));
 
     }
 }

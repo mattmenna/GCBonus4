@@ -6,8 +6,8 @@ import java.util.Scanner;
  */
 public class OOValidator {
 
-    private Scanner sc = new Scanner(System.in);
-    private boolean validEntry = false;
+    static Scanner sc = new Scanner(System.in);
+    private static boolean validEntry = false;
 
     public OOValidator(Scanner sc) {
 
@@ -20,7 +20,7 @@ public class OOValidator {
         while (!validEntry) {
             System.out.println(prompt);
             sInput = sc.nextLine();
-            if (sInput.matches("[1234567890]")) {
+            if (sInput.matches("[1234567890]+")) {
                 returnInt = Integer.parseInt(sInput);
                 validEntry = true;
 
@@ -39,7 +39,7 @@ public class OOValidator {
         while (!validEntry) {
             System.out.println(prompt);
             sInput = sc.nextLine();
-            if (sInput.matches("[1234567890]")&& (Integer.parseInt(sInput) < min || Integer.parseInt(sInput) > max)) {
+            if (sInput.matches("[1234567890]+")&& (Integer.parseInt(sInput) < min || Integer.parseInt(sInput) > max)) {
                 System.out.println("Please Try Again");
 
             } else {
@@ -58,7 +58,7 @@ public class OOValidator {
         while (!validEntry) {
             System.out.println(prompt);
             sInput = sc.nextLine();
-            if (sInput.matches("[1234567890]")) {
+            if (sInput.matches("[1234567890]+")) {
                 returnDouble = Double.valueOf(sInput);
                 validEntry = true;
 
@@ -77,7 +77,7 @@ public class OOValidator {
         while (!validEntry) {
             System.out.println(prompt);
             sInput = sc.nextLine();
-            if (sInput.matches("[1234567890]") && (Double.valueOf(sInput) <min || Double.valueOf(sInput)>max)) {
+            if (sInput.matches("[1234567890]+") && (Double.valueOf(sInput) <min || Double.valueOf(sInput)>max)) {
                 System.out.println("Please Try Again");
             } else {
                 returnDouble = Double.valueOf(sInput);
