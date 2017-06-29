@@ -20,7 +20,6 @@ public class ValidatorTestApp {
         OOValidator validClass = new OOValidator(scnr);
 
         System.out.println(validClass.getInt("Enter an integer:"));
-
         System.out.println();
         System.out.println(validClass.getIntWithinRange("Enter an integer between 4 and 10" , 4, 10));
         System.out.println();
