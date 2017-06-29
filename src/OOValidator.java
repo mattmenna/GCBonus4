@@ -9,10 +9,17 @@ public class OOValidator {
     static Scanner sc = new Scanner(System.in);
     private static boolean validEntry = false;
 
+    /**
+     * @param sc
+     */
     public OOValidator(Scanner sc) {
 
     }
 
+    /**
+     * @param prompt
+     * @return
+     */
     public int getInt(String prompt) {
         int returnInt = 0;
         String sInput;
@@ -33,6 +40,12 @@ public class OOValidator {
         return returnInt;
     } // end method
 
+    /**
+     * @param prompt
+     * @param min
+     * @param max
+     * @return
+     */
     public int getIntWithinRange(String prompt, int min, int max) {
         int returnInt = 0;
         String sInput;
@@ -40,7 +53,7 @@ public class OOValidator {
         while (!validEntry) {
             System.out.println(prompt);
             sInput = sc.nextLine();
-            if (sInput.matches("[1234567890]+")&& (Integer.parseInt(sInput) < min || Integer.parseInt(sInput) > max)) {
+            if (sInput.matches("[1234567890]+") && (Integer.parseInt(sInput) < min || Integer.parseInt(sInput) > max)) {
                 System.out.println("Please Try Again");
 
             } else {
@@ -53,6 +66,10 @@ public class OOValidator {
         return returnInt;
     } // end method
 
+    /**
+     * @param prompt
+     * @return
+     */
     public double getDouble(String prompt) {
         double returnDouble = 0;
         String sInput;
@@ -73,6 +90,12 @@ public class OOValidator {
         return returnDouble;
     }
 
+    /**
+     * @param prompt
+     * @param min
+     * @param max
+     * @return
+     */
     public double getDoubleWithinRange(String prompt, double min, double max) {
         double returnDouble = 0;
         String sInput;
@@ -80,7 +103,7 @@ public class OOValidator {
         while (!validEntry) {
             System.out.println(prompt);
             sInput = sc.nextLine();
-            if (sInput.matches("[1234567890]+") && (Double.valueOf(sInput) <min || Double.valueOf(sInput)>max)) {
+            if (sInput.matches("[1234567890]+") && (Double.valueOf(sInput) < min || Double.valueOf(sInput) > max)) {
                 System.out.println("Please Try Again");
             } else {
                 returnDouble = Double.valueOf(sInput);
