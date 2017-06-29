@@ -29,6 +29,7 @@ public class OOValidator {
             } // end else
 
         } // end while
+        validEntry = false;
         return returnInt;
     } // end method
 
@@ -48,6 +49,7 @@ public class OOValidator {
             } // end else
 
         } // end while
+        validEntry = false;
         return returnInt;
     } // end method
 
@@ -67,6 +69,7 @@ public class OOValidator {
             } // end else
 
         } // end while
+        validEntry = false;
         return returnDouble;
     }
 
@@ -85,6 +88,7 @@ public class OOValidator {
             } // end else
 
         } // end while
+        validEntry = false;
         return returnDouble;
     }
 }
