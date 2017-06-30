@@ -1,4 +1,3 @@
-
 /*
 GCBonus4
 ValidatorTestApp
@@ -22,10 +21,8 @@ public class ValidatorTestApp {
         Scanner scnr = new Scanner(System.in);
         OOValidator validClass = new OOValidator(scnr);
 
-
         while( cont !='n' ) {
             System.out.println("What Method do you want to test?");
-
             System.out.println("\t1: Test for .getInt method");
             System.out.println("\t2: Test for .getIntWithinRange method");
             System.out.println("\t3: Test for .getDouble method");
