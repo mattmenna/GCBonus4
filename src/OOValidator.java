@@ -53,13 +53,19 @@ public class OOValidator {
         while (!validEntry) {
             System.out.println(prompt);
             sInput = sc.nextLine();
-            if (sInput.matches("[1234567890]+") && (Integer.parseInt(sInput) < min || Integer.parseInt(sInput) > max)) {
-                System.out.println("Please Try Again");
 
-            } else {
-                returnInt = Integer.parseInt(sInput);
-                validEntry = true;
-            } // end else
+            try {
+                if (sInput.matches("[1234567890]+") && (Integer.parseInt(sInput) < min || Integer.parseInt(sInput) > max)) {
+                    System.out.println("Please Try Again");
+
+                } else {
+                    returnInt = Integer.parseInt(sInput);
+                    validEntry = true;
+                } // end else
+            } catch (NumberFormatException e) {
+                System.out.println("Please Try Again");
+                continue;
+            }
 
         } // end while
         validEntry = false;
@@ -103,12 +109,17 @@ public class OOValidator {
         while (!validEntry) {
             System.out.println(prompt);
             sInput = sc.nextLine();
-            if (sInput.matches("[1234567890]+") && (Double.valueOf(sInput) < min || Double.valueOf(sInput) > max)) {
+            try {
+                if (sInput.matches("[1234567890]+") && (Double.valueOf(sInput) < min || Double.valueOf(sInput) > max)) {
+                    System.out.println("Please Try Again");
+                } else {
+                    returnDouble = Double.valueOf(sInput);
+                    validEntry = true;
+                } // end else
+            } catch (NumberFormatException e) {
                 System.out.println("Please Try Again");
-            } else {
-                returnDouble = Double.valueOf(sInput);
-                validEntry = true;
-            } // end else
+                continue;
+            }
 
         } // end while
         validEntry = false;
