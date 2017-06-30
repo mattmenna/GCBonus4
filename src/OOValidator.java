@@ -12,9 +12,9 @@ public class OOValidator {
     /**
      * @param sc
      */
-    public OOValidator(Scanner sc) {
-
-    }
+//    public OOValidator(Scanner sc) {
+//
+//    }
 
     /**
      * @param prompt
@@ -57,7 +57,6 @@ public class OOValidator {
             try {
                 if (sInput.matches("[1234567890]+") && (Integer.parseInt(sInput) < min || Integer.parseInt(sInput) > max)) {
                     System.out.println("Please Try Again");
-
                 } else {
                     returnInt = Integer.parseInt(sInput);
                     validEntry = true;
@@ -124,5 +123,6 @@ public class OOValidator {
         } // end while
         validEntry = false;
         return returnDouble;
-    }
+    } // end method
+
 }
