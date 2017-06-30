@@ -8,7 +8,7 @@ public class MyValidator extends OOValidator {
 
     /**
      *
-     * @param prompt
+     * @param prompt String output to the console
      * @return
      */
     public String getRequiredString(String prompt) {
@@ -31,7 +31,7 @@ public class MyValidator extends OOValidator {
 
     /**
      *
-     * @param prompt
+     * @param prompt String output to the console
      * @param s1
      * @param s2
      * @return
@@ -43,13 +43,20 @@ public class MyValidator extends OOValidator {
 
     public boolean getContinue(String sInput){
         //String[] contArray = {"yes", "y"};
+        char wCont = 'y';
+        while ( wCont != 'n' ) {
 
             if (sInput.toLowerCase().equals("yes") || sInput.toLowerCase().equals("y")) {
                 return true;
-            } else {
-                System.out.println("Please try again");
-                return false;
+            } else if(sInput.toLowerCase().equals("no") || sInput.toLowerCase().equals("n")){
+                break;
             }
+            else {
+                System.out.println("Please try again");
+                sInput = sc.nextLine();
+            }
+        }
+            return false;
     } // end method
 
 } // end class

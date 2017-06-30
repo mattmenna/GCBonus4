@@ -9,6 +9,7 @@ IntelliJ IDEA
 Used to tet the methods in the validator, OOValidator, and MyValidator classes.
  */
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class ValidatorTestApp {
@@ -35,45 +36,46 @@ public class ValidatorTestApp {
 
             caseNumber = scnr.nextInt();
 
-            switch (caseNumber) {
-                case 1: {
-                    System.out.println(validClass.getInt("Enter an integer:"));
-                    System.out.println();
-                    break;
-                }
-                case 2: {
-                    System.out.println(validClass.getIntWithinRange("Enter an integer between 4 and 10", 4, 10));
-                    System.out.println();
-                    break;
-                }
-                case 3: {
-                    System.out.println(validClass.getDouble("Enter a double:"));
-                    System.out.println();
-                    break;
-                }
-                case 4: {
-                    System.out.println(validClass.getDoubleWithinRange("Enter a double between 0 and 100:", 0, 100));
-                    System.out.println();
-                    break;
-                }
-                case 5: {
-                    System.out.println(validClass.getRequiredString("Enter a string:"));
-                    System.out.println();
-                    break;
-                }
-                case 6: {
-                    System.out.println("upper or lower");
-                    upLowCase = scnr.nextLine();
-                    System.out.println(validClass.getRequiredString("Enter a string:", upLowCase));
-                    System.out.println();
-                    break;
-                }
-                case 7: {
-                    System.out.println(validClass.getChoiceString("Enter a string:", "test", "test"));
-                    System.out.println();
-                    break;
-                }
-            } //end switch
+
+                switch (caseNumber) {
+                    case 1: {
+                        System.out.println(validClass.getInt("Enter an integer:"));
+                        System.out.println();
+                        break;
+                    }
+                    case 2: {
+                        System.out.println(validClass.getIntWithinRange("Enter an integer between 4 and 10", 4, 10));
+                        System.out.println();
+                        break;
+                    }
+                    case 3: {
+                        System.out.println(validClass.getDouble("Enter a double:"));
+                        System.out.println();
+                        break;
+                    }
+                    case 4: {
+                        System.out.println(validClass.getDoubleWithinRange("Enter a double between 0 and 100:", 0, 100));
+                        System.out.println();
+                        break;
+                    }
+                    case 5: {
+                        System.out.println(validClass.getRequiredString("Enter a string:"));
+                        System.out.println();
+                        break;
+                    }
+                    case 6: {
+                        System.out.println("upper or lower");
+                        upLowCase = scnr.nextLine();
+                        System.out.println(validClass.getRequiredString("Enter a string:", upLowCase));
+                        System.out.println();
+                        break;
+                    }
+                    case 7: {
+                        System.out.println(validClass.getChoiceString("Enter a string:", "test", "test"));
+                        System.out.println();
+                        break;
+                    }
+                } //end switch
 
             System.out.println("Do you want to continue? (y/n):");
                 scnr.nextLine();

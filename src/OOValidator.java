@@ -17,7 +17,7 @@ public class OOValidator {
 //    }
 
     /**
-     * @param prompt
+     * @param prompt String output to the console
      * @return
      */
     public int getInt(String prompt) {
@@ -41,7 +41,7 @@ public class OOValidator {
     } // end method
 
     /**
-     * @param prompt
+     * @param prompt String output to the console
      * @param min
      * @param max
      * @return
@@ -72,7 +72,7 @@ public class OOValidator {
     } // end method
 
     /**
-     * @param prompt
+     * @param prompt String output to the console
      * @return
      */
     public double getDouble(String prompt) {
@@ -96,7 +96,7 @@ public class OOValidator {
     }
 
     /**
-     * @param prompt
+     * @param prompt String output to the console
      * @param min
      * @param max
      * @return
